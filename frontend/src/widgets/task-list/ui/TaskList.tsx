@@ -3,7 +3,7 @@ import { tasksData } from "../data/tasks";
 
 export const TaskList = () => {
   return (
-    <ul>
+    <ul className="flex">
       {tasksData.map((task) => (
         <TaskItem key={task.id} task={task} />
       ))}
