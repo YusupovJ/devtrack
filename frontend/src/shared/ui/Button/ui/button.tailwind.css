@@ -1,0 +1,28 @@
+@reference "../../../styles/index.tailwind.css";
+
+/* Variant */
+.button-variant-primary {
+  @apply bg-accent text-accent-soft hover:bg-accent-strong active:bg-accent;
+}
+
+.button-variant-secondary {
+  @apply border-border border bg-bg hover:bg-bg-hover active:bg-border;
+}
+
+.button-variant-silent {
+  @apply bg-transparent hover:bg-bg-hover active:bg-bg-subtle text-text-2;
+}
+
+.button-variant-danger {
+  @apply bg-danger-soft text-danger border border-danger-soft hover:border-danger active:opacity-70;
+}
+
+/* Size */
+
+.button-size-medium {
+  @apply gap-2 px-5 py-2;
+}
+
+.button-size-small {
+  @apply gap-1.5 px-4 py-1 text-sm;
+}

@@ -14,7 +14,7 @@ export const TaskItem = ({ task }: TaskItemProps) => {
   return (
     <div>
       <input type="checkbox" />
-      <p>{task.label}</p>
+      <p className="text">{task.label}</p>
       <span>{TASK_STATE[task.state]}</span>
     </div>
   );
