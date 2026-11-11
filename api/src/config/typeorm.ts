@@ -1,11 +1,13 @@
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from "@nestjs/typeorm";
-import { User } from "../modules/user/entities/user.entity.js";
 
 @Injectable()
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
-  constructor(private configService: ConfigService) {}
+  private isDev: boolean;
+  constructor(private configService: ConfigService) {
+    this.isDev = this.configService.get("nodeEnv") === "dev";
+  }
 
   createTypeOrmOptions(): TypeOrmModuleOptions {
     return {
@@ -16,7 +18,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       password: this.configService.get("database.password"),
       database: this.configService.get("database.name"),
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: this.isDev,
     };
   }
 }
