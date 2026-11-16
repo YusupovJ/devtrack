@@ -1,6 +1,5 @@
 {
-  "name": "api",
-  "version": "0.0.1",
+  "name": "devtrack-api",
   "type": "module",
   "scripts": {
     "build": "nest build",
@@ -33,7 +32,6 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^12.0.0",
-    "@nestjs/mau": "^0.2.6",
     "@nestjs/schematics": "^12.0.0",
     "@nestjs/testing": "^12.0.1",
     "@types/bcrypt": "^6.0.0",
@@ -49,5 +47,9 @@
     "typescript": "^6.0.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.1.2"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true,
+    "@scarf/scarf": false
   }
 }
