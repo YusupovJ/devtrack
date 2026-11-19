@@ -1,7 +1,5 @@
 {
-  "name": "Devtrack",
-  "private": true,
-  "version": "0.0.0",
+  "name": "devtrack-frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",

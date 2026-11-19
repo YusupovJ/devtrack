@@ -1,6 +1,5 @@
 {
-  "name": "api",
-  "version": "0.0.1",
+  "name": "devtrack-api",
   "type": "module",
   "scripts": {
     "build": "nest build",

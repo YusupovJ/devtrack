@@ -56,7 +56,6 @@
   --color-danger: #ff8e76;
   --color-danger-soft: #3b1a14;
 }
-/* Font */
 
 html {
   font-family: var(--font-onest);
@@ -65,6 +64,14 @@ html {
 body {
   background-color: var(--color-bg-subtle);
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Font */
 
 h1 {
   @apply text-5xl text-text font-bold;
