@@ -26,3 +26,7 @@
 .button-size-small {
   @apply gap-1.5 px-4 py-1 text-sm;
 }
+
+.button-size-icon {
+  @apply gap-2 p-3;
+}

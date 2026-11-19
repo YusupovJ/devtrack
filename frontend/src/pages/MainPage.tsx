@@ -1,5 +1,3 @@
-import { TaskList } from "../widgets/task-list";
-
 export const MainPage = () => {
-  return <TaskList />;
+  return <h1>Main page</h1>;
 };

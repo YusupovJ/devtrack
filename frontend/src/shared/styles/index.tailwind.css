@@ -62,6 +62,10 @@ html {
   font-family: var(--font-onest);
 }
 
+body {
+  background-color: var(--color-bg-subtle);
+}
+
 h1 {
   @apply text-5xl text-text font-bold;
 }

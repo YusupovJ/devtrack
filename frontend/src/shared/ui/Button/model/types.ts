@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 export type TButtonVariant = "primary" | "secondary" | "silent" | "danger";
-export type TButtonSize = "medium" | "small";
+export type TButtonSize = "medium" | "small" | "icon";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
