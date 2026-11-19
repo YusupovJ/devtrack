@@ -6,14 +6,14 @@ export const Button = ({ children, className, variant = "primary", size = "mediu
   return (
     <button
       className={clsx(
-        "flex items-center justify-center rounded-lg font-semibold transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-80",
+        "flex items-center select-none outline-border-strong justify-center rounded-lg font-semibold transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-80",
         `button-variant-${variant}`,
         `button-size-${size}`,
         className,
       )}
       {...props}
     >
-      <span>{icon}</span>
+      {icon && <span>{icon}</span>}
       {children}
     </button>
   );
