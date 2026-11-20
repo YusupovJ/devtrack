@@ -8,9 +8,6 @@ export interface IInputProps extends ComponentProps<"input"> {
 
 export interface IInputTextProps extends IInputProps {}
 export interface IInputPasswordProps extends IInputProps {}
-export interface IInputNumberProps extends IInputProps {
-  step?: number;
-}
 
 export interface IInputLabelProps extends Omit<LabelHTMLAttributes<HTMLLabelElement>, "htmlFor"> {}
 export interface IInputDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
@@ -20,6 +17,6 @@ export interface IInputContext {
   id?: string;
 }
 
-export interface IInputRootProps extends Partial<IInputContext> {
+export interface IInputRootProps extends ComponentProps<"div">, IInputContext {
   children?: ReactNode;
 }

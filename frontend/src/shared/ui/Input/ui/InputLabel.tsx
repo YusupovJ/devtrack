@@ -7,7 +7,11 @@ export const InputLabel = ({ children, className, ...props }: IInputLabelProps) 
   const { id } = useContext(InputContext);
 
   return (
-    <label className={clsx("block mb-1", className)} htmlFor={id} {...props}>
+    <label
+      className={clsx("block text-sm font-medium text-text mb-1.5 select-none cursor-pointer", className)}
+      htmlFor={id}
+      {...props}
+    >
       {children}
     </label>
   );

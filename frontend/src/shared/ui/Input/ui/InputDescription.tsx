@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { InputContext } from "../provider/context";
 
 export const InputDescription = ({ children, className, ...props }: IInputDescriptionProps) => {
+  if (!children) return null;
   const { status, id } = useContext(InputContext);
 
   return (
