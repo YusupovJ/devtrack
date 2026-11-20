@@ -8,7 +8,7 @@ export const InputLabel = ({ children, className, ...props }: IInputLabelProps) 
 
   return (
     <label
-      className={clsx("block text-sm font-medium text-text mb-1.5 select-none cursor-pointer", className)}
+      className={clsx("block text-sm font-semibold text-text mb-1.5 select-none cursor-pointer", className)}
       htmlFor={id}
       {...props}
     >

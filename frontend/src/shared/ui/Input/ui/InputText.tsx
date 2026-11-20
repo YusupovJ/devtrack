@@ -11,9 +11,8 @@ export const InputText = ({ className, ref, status: propsStatus, ...props }: IIn
     <input
       id={id}
       ref={ref}
-      aria-describedby={id ? `${id}-description` : undefined}
       className={clsx(
-        "border rounded-lg px-2.5 py-1.5 text-sm bg-surface w-full text-text placeholder:text-text-3",
+        "border rounded-lg px-2.5 py-3 text-sm bg-surface w-full text-text placeholder:text-text-3",
         status === "error" ? "border-danger focus:outline-danger" : "border-border focus:outline-border-strong",
         className,
       )}

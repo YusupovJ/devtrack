@@ -92,3 +92,7 @@ h3 {
 .mono {
   @apply font-mono text-xs text-text;
 }
+
+.link {
+  @apply text-accent text-sm hover:underline font-semibold;
+}

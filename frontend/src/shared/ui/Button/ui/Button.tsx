@@ -11,9 +11,10 @@ export const Button = ({ children, className, variant = "primary", size = "mediu
         `button-size-${size}`,
         className,
       )}
+      type="button"
       {...props}
     >
-      {icon && <span>{icon}</span>}
+      {icon}
       {children}
     </button>
   );
