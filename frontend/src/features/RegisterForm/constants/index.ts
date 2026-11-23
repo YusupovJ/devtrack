@@ -1,5 +1,5 @@
-export const DIGIT_OR_SYMBOL_REGEX = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-export const UPPER_AND_LOWER_REGEX = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+export const DIGIT_OR_SYMBOL_REGEX = /[0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
+export const UPPER_AND_LOWER_REGEX = /(?=.*[a-z])(?=.*[A-Z])/;
 
 export const PASSWORD_RULES = [
   { label: "От 8 символов", test: (v: string) => v.length >= 8 },
