@@ -3,9 +3,9 @@ import type { IInputRootProps } from "../model/types";
 import { InputContext } from "./context";
 import clsx from "clsx";
 
-export const InputRoot = ({ children, className, status, id, ...props }: IInputRootProps) => {
+export const InputRoot = ({ children, className, error, id, ...props }: IInputRootProps) => {
   const generatedId = useId();
-  const value = useMemo(() => ({ status, id: id ?? generatedId }), [status, id, generatedId]);
+  const value = useMemo(() => ({ error, id: id ?? generatedId }), [error, id, generatedId]);
 
   return (
     <InputContext.Provider value={value}>

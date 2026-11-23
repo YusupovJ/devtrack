@@ -1,9 +1,8 @@
 import type { ComponentProps, HTMLAttributes, LabelHTMLAttributes, ReactNode } from "react";
-
-export type TInputStatus = "default" | "error";
+import type { FieldError } from "react-hook-form";
 
 export interface IInputProps extends ComponentProps<"input"> {
-  status?: TInputStatus;
+  error?: boolean | FieldError;
 }
 
 export interface IInputTextProps extends IInputProps {}
@@ -13,7 +12,7 @@ export interface IInputLabelProps extends Omit<LabelHTMLAttributes<HTMLLabelElem
 export interface IInputDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
 
 export interface IInputContext {
-  status?: TInputStatus;
+  error?: boolean | FieldError;
   id?: string;
 }
 
