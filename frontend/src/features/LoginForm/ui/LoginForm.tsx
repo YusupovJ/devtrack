@@ -13,7 +13,7 @@ export const LoginForm = (props: ILoginFormProps) => {
     formState: { errors, isSubmitting },
   } = useForm<TLoginFormValue>({
     resolver: zodResolver(loginSchema),
-    mode: "onTouched",
+    mode: "onSubmit",
   });
 
   const onSubmit: SubmitHandler<TLoginFormValue> = (values) => {
