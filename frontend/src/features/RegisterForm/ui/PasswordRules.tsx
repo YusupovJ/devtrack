@@ -4,7 +4,7 @@ import { CheckIcon, MinusIcon, XIcon } from "lucide-react";
 import clsx from "clsx";
 import { useWatch } from "react-hook-form";
 
-export const PasswordRules = ({ control, touched, isSubmitted }: IPasswordRulesProps) => {
+export const PasswordRules = ({ control, isSubmitted }: IPasswordRulesProps) => {
   const value = useWatch({ control, name: "password" });
 
   if (!value && !isSubmitted) return null;
@@ -13,7 +13,7 @@ export const PasswordRules = ({ control, touched, isSubmitted }: IPasswordRulesP
     <ul className="flex flex-col gap-0.5 mt-1.5">
       {PASSWORD_RULES.map((rule) => {
         const isValid = rule.test(value || "");
-        const isError = !isValid && (touched || isSubmitted);
+        const isError = !isValid && isSubmitted;
 
         return (
           <li

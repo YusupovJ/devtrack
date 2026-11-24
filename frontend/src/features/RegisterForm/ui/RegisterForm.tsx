@@ -11,7 +11,7 @@ export const RegisterForm = (props: IRegisterFormProps) => {
     register,
     handleSubmit,
     control,
-    formState: { errors, isSubmitting, touchedFields, isSubmitted },
+    formState: { errors, isSubmitting, isSubmitted },
   } = useForm<TRegisterFormValue>({
     resolver: zodResolver(registerSchema),
     mode: "onSubmit",
@@ -41,7 +41,7 @@ export const RegisterForm = (props: IRegisterFormProps) => {
           <Input.Label>Пароль</Input.Label>
         </div>
         <Input.Password placeholder="••••••••" autoComplete="new-password" {...register("password")} />
-        <PasswordRules control={control} touched={!!touchedFields.password} isSubmitted={isSubmitted} />
+        <PasswordRules control={control} isSubmitted={isSubmitted} />
       </Input.Root>
       <Button type="submit" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? "Регистрация..." : "Зарегистрироваться"}

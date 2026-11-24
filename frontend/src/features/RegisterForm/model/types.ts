@@ -7,7 +7,6 @@ export interface IRegisterFormProps {
 }
 
 export interface IPasswordRulesProps {
-  touched: boolean;
   isSubmitted: boolean;
   control: Control<TRegisterFormValue>;
 }

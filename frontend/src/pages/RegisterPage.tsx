@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import { RegisterCard } from "../widgets/RegisterCard";
+import { AuthLayout } from "./layouts/AuthLayout";
 
 export const RegisterPage = () => {
   return (
-    <main className="min-h-dvh py-8 flex flex-col items-center justify-center">
+    <AuthLayout>
       <RegisterCard />
       <p className="text-text-3 mt-5 text-sm">
         Уже есть аккаунт?{" "}
@@ -11,6 +12,6 @@ export const RegisterPage = () => {
           Войти
         </Link>
       </p>
-    </main>
+    </AuthLayout>
   );
 };
