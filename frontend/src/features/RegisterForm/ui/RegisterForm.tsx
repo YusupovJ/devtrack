@@ -5,6 +5,7 @@ import type { IRegisterFormProps, TRegisterFormValue } from "../model/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "../model/schema";
 import { PasswordRules } from "./PasswordRules";
+import { useNavigate } from "react-router";
 
 export const RegisterForm = (props: IRegisterFormProps) => {
   const {
@@ -16,9 +17,13 @@ export const RegisterForm = (props: IRegisterFormProps) => {
     resolver: zodResolver(registerSchema),
     mode: "onSubmit",
   });
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<TRegisterFormValue> = (values) => {
     console.log(values);
+    navigate("/auth/confirm-email", {
+      state: { email: values.email },
+    });
     props.onSuccess?.();
   };
 

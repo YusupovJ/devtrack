@@ -65,34 +65,38 @@ body {
   background-color: var(--color-bg-subtle);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Classes */
+
+@layer base {
+  h1 {
+    @apply text-5xl text-text font-bold;
+  }
+
+  h2 {
+    @apply text-2xl text-text font-semibold;
+  }
+
+  h3 {
+    @apply text-text font-semibold;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
-/* Font */
+@layer components {
+  .caption {
+    @apply text-xs font-semibold text-text-2;
+  }
 
-h1 {
-  @apply text-5xl text-text font-bold;
-}
+  .mono {
+    @apply font-mono text-xs text-text;
+  }
 
-h2 {
-  @apply text-2xl text-text font-semibold;
-}
-
-h3 {
-  @apply text-text font-semibold;
-}
-
-.caption {
-  @apply text-xs font-semibold text-text-2;
-}
-
-.mono {
-  @apply font-mono text-xs text-text;
-}
-
-.link {
-  @apply text-accent text-sm hover:underline font-semibold;
+  .link {
+    @apply text-accent text-sm hover:underline font-semibold;
+  }
 }
