@@ -9,4 +9,5 @@ export default () => ({
     name: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
   },
+  jwtSecret: process.env.JWT_SECRET,
 });
